@@ -1,0 +1,522 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
+@import url('https://fonts.googleapis.com/css?family=Kanit&display=swap');
+
+@import url('https://fonts.googleapis.com/css?family=Sarabun&display=swap');
+
+@import url('https://fonts.googleapis.com/css?family=Nunito+Sans&display=swap');
+
+@import url('https://fonts.googleapis.com/css?family=Varela+Round&display=swap');
+
+.loader {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    animation: loader_animation 1s linear infinite;
+}
+
+@keyframes loader_animation {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.App {
+
+    width: 100%;
+
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    width: 300px;
+    height: 100%;
+    /*background: #871231;*/
+}
+
+.hist-container {
+    width: 100%;
+    height: 180px;
+    overflow-y: auto;
+}
+
+.hist-container::-webkit-scrollbar {
+    width: 0px;
+    background: transparent; /* make scrollbar transparent */
+}
+
+.addtrans-container {
+    width: 100%;
+    height: 150px;
+    margin-top: 15px;
+}
+
+
+.header {
+    height: 60px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Montserrat';
+}
+
+
+.history-container {
+    width: calc(98% - 5px);
+    min-height: 30px;
+    box-shadow: -1px 0px 3px 0.8px rgba(90, 90, 90, 0.5);
+    margin-top: 9px;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 1%;
+}
+
+.history-container:last-child{
+    margin-bottom: 10px;
+}
+
+.income-shower {
+    border-right: 5px solid green;
+}
+
+.expense-shower {
+    border-right: 5px solid red;
+}
+
+.history-text {
+    width: calc(50% - 5px);
+    display: flex;
+    align-items: center;
+    padding-left: 5px;
+    font-family: 'Kanit';
+}
+
+.history-time {
+    width: 30%;
+    display: flex;
+    align-items: center;
+    font-family: 'Kanit';
+    justify-content: flex-end;
+    font-size: 14px;
+}
+
+.history-amount {
+    width: calc(20% - 5px);
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 5px;
+    font-family: 'Kanit';
+}
+
+
+.sub-header {
+    width: 100%;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    font-family: 'Nunito Sans';
+    border-bottom: 1px solid #999;
+    /*background: #987123;*/
+    font-size: 18px;
+    margin-bottom: 7px;
+}
+
+
+
+.balance-container {
+    width: 100%;
+    /*background: #987123;*/
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.total-balance {
+    width: 100%;
+    /*background: #fa9872;*/
+}
+
+.balance-header {
+    width: 100%;
+    font-size: 14px;
+    font-weight: 300;
+    font-family: 'Varela Round';
+    margin-bottom: 5px;
+}
+
+.balance-value {
+    width: 100%;
+    font-size: 24px;
+    font-weight: 550;
+    font-family: 'Varela Round';
+}
+
+.inex-container-main {
+    width: 100%;
+    margin-top: 13px;
+    box-shadow: 0px 1px 3px 0.7px #666;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.inex-display-main {
+    width: 40%;
+    /*background: #981231;*/
+    height: 50px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.inex-display-main:nth-child(1) {
+    border-right: 1px solid #999;
+}
+
+.inex-display-main:nth-child(2) {
+    margin-left: 7px;
+}
+
+.inex-header {
+    width: 100%;
+    font-size: 16px;
+    font-weight: 600;
+    font-family: 'Varela Round';
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.inex-value {
+    width: 100%;
+    font-size: 20px;
+    font-weight: 600;
+    font-family: 'Varela Round';
+    text-align: center;
+    margin-top: 3px;
+}
+
+
+
+.transaction-container {
+    width: 100%;
+    height: 100%;
+    margin-top: 20px;
+}
+
+.input-container {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.input-label {
+    width: 100%;
+    font-size: 14px;
+    font-weight: 800;
+    margin-bottom: 7px;
+    font-family: 'Sarabun';
+}
+
+.input-main {
+    width: 100%;
+}
+
+.input-main input {
+    width: calc(100% - 10px);
+    height: 24px;
+    border: none;
+    box-shadow: 0px 0px 3px 0.2px #666;
+    padding-left: 6px;
+    font-family: 'Sarabun';
+    font-weight: bold;
+}
+
+.btn-add-trans {
+    width: 100%;
+    height: 33px;
+    background: #8b008b;
+    border: none;
+    color: white;
+    font-family: 'Sarabun';
+    font-size: 16px;
+    text-transform: capitalize;
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
+@import url('https://fonts.googleapis.com/css?family=Kanit&display=swap');
+
+@import url('https://fonts.googleapis.com/css?family=Sarabun&display=swap');
+
+@import url('https://fonts.googleapis.com/css?family=Nunito+Sans&display=swap');
+
+@import url('https://fonts.googleapis.com/css?family=Varela+Round&display=swap');
+
+.loader {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    animation: loader_animation 1s linear infinite;
+}
+
+@keyframes loader_animation {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.App {
+
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    width: 300px;
+    height: 100%;
+    /*background: #871231;*/
+}
+
+.hist-container {
+    width: 100%;
+    height: 180px;
+    overflow-y: auto;
+}
+
+.hist-container::-webkit-scrollbar {
+    width: 0px;
+    background: transparent; /* make scrollbar transparent */
+}
+
+.addtrans-container {
+    width: 100%;
+    height: 150px;
+    margin-top: 15px;
+}
+
+
+.header {
+    height: 60px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Montserrat';
+}
+
+
+.history-container {
+    width: calc(98% - 5px);
+    min-height: 30px;
+    box-shadow: -1px 0px 3px 0.8px rgba(90, 90, 90, 0.5);
+    margin-top: 9px;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 1%;
+}
+
+.history-container:last-child{
+    margin-bottom: 10px;
+}
+
+.income-shower {
+    border-right: 5px solid green;
+}
+
+.expense-shower {
+    border-right: 5px solid red;
+}
+
+.history-text {
+    width: calc(50% - 5px);
+    display: flex;
+    align-items: center;
+    padding-left: 5px;
+    font-family: 'Kanit';
+}
+
+.history-time {
+    width: 30%;
+    display: flex;
+    align-items: center;
+    font-family: 'Kanit';
+    justify-content: flex-end;
+    font-size: 14px;
+}
+
+.history-amount {
+    width: calc(20% - 5px);
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 5px;
+    font-family: 'Kanit';
+}
+
+
+.sub-header {
+    width: 100%;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    font-family: 'Nunito Sans';
+    border-bottom: 1px solid #999;
+    /*background: #987123;*/
+    font-size: 18px;
+    margin-bottom: 7px;
+}
+
+
+
+.balance-container {
+    width: 100%;
+    /*background: #987123;*/
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.total-balance {
+    width: 100%;
+    /*background: #fa9872;*/
+}
+
+.balance-header {
+    width: 100%;
+    font-size: 14px;
+    font-weight: 300;
+    font-family: 'Varela Round';
+    margin-bottom: 5px;
+}
+
+.balance-value {
+    width: 100%;
+    font-size: 24px;
+    font-weight: 550;
+    font-family: 'Varela Round';
+}
+
+.inex-container-main {
+    width: 100%;
+    margin-top: 13px;
+    box-shadow: 0px 1px 3px 0.7px #666;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.inex-display-main {
+    width: 40%;
+    /*background: #981231;*/
+    height: 50px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.inex-display-main:nth-child(1) {
+    border-right: 1px solid #999;
+}
+
+.inex-display-main:nth-child(2) {
+    margin-left: 7px;
+}
+
+.inex-header {
+    width: 100%;
+    font-size: 16px;
+    font-weight: 600;
+    font-family: 'Varela Round';
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.inex-value {
+    width: 100%;
+    font-size: 20px;
+    font-weight: 600;
+    font-family: 'Varela Round';
+    text-align: center;
+    margin-top: 3px;
+}
+
+
+
+.transaction-container {
+    width: 100%;
+    height: 100%;
+    margin-top: 20px;
+}
+
+.input-container {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.input-label {
+    width: 100%;
+    font-size: 14px;
+    font-weight: 800;
+    margin-bottom: 7px;
+    font-family: 'Sarabun';
+}
+
+.input-main {
+    width: 100%;
+}
+
+.input-main input {
+    width: calc(100% - 10px);
+    height: 24px;
+    border: none;
+    box-shadow: 0px 0px 3px 0.2px #666;
+    padding-left: 6px;
+    font-family: 'Sarabun';
+    font-weight: bold;
+}
+
+.btn-add-trans {
+    width: 100%;
+    height: 33px;
+    background: #8b008b;
+    border: none;
+    color: white;
+    font-family: 'Sarabun';
+    font-size: 16px;
+    text-transform: capitalize;
+}}
